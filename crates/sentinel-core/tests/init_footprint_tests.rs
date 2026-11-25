@@ -27,5 +27,8 @@ fn constructor_values_increase_instance_footprint_and_rent() {
 #[test]
 fn rent_reserve_scales_linearly_with_duration() {
     let estimate = predict_initial_footprint(0, &[]);
-    assert_eq!(estimate.rent_90_day_stroops, estimate.rent_30_day_stroops * 3);
+    assert_eq!(
+        estimate.rent_90_day_stroops,
+        estimate.rent_30_day_stroops * 3
+    );
 }
